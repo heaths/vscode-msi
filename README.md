@@ -6,3 +6,5 @@ and patch (.msp) packages.
 ## License
 
 Licensed under the [MIT](LICENSE.txt) license.
+
+[vscode]: https://code.visualstudio.com
