@@ -1,0 +1,3 @@
+[submodule "crates/msi"]
+	path = crates/msi
+	url = https://github.com/heaths/rust-msi.git

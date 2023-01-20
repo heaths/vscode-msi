@@ -1,0 +1,20 @@
+{
+  "words": [
+    "localizable",
+    "prewatch"
+  ],
+  "dictionaries": [
+    "rust"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "rust",
+      "path": "rust-words.txt"
+    }
+  ],
+  "ignorePaths": [
+    "crates/msi/**",
+    "Cargo.lock",
+    "package-lock.json"
+  ]
+}
