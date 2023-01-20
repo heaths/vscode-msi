@@ -1,6 +1,7 @@
 bindgen
 cdylib
 clippy
+rlib
 rustfmt
 rustup
 serde

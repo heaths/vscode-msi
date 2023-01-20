@@ -1,5 +1,7 @@
+[patch.crates-io]
+msi = { git = "https://github.com/heaths/rust-msi", branch = "issue13" }
+
 [workspace]
 members = [
-    "crates/msi",
     "crates/msi-wasm",
 ]

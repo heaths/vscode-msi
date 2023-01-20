@@ -16,11 +16,8 @@ WebAssembly module that provides Windows Installer package information for a Vis
 crate-type = ["cdylib","rlib"]
 
 [dependencies]
+msi = "0.5.0"
 serde = "1.0.152"
 serde-wasm-bindgen = "0.4.5"
 wasm-bindgen = "0.2.83"
 web-sys = "0.3.60"
-
-[dependencies.msi]
-version = "0.5.0"
-path = "../msi"

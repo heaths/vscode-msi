@@ -8,6 +8,9 @@
         "dist": true
     },
     "rust-analyzer.check.command": "clippy",
+    "rust-analyzer.check.extraArgs": [
+      "--no-deps"
+    ],
     "rust-analyzer.checkOnSave": true,
     "typescript.tsc.autoDetect": "off"
 }
