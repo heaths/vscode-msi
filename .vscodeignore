@@ -6,6 +6,7 @@
 **/*.map
 **/*.ts
 **/tsconfig.json
+crates/**
 node_modules/**
 out/**
 src/**

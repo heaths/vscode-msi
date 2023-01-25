@@ -1,9 +1,9 @@
 //@ts-check
 
-'use strict';
+"use strict";
 
-const path = require('path');
-const htmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const htmlWebpackPlugin = require("html-webpack-plugin");
 const wasmPackPlugin = require("@wasm-tool/wasm-pack-plugin");
 
 //@ts-check
@@ -11,19 +11,19 @@ const wasmPackPlugin = require("@wasm-tool/wasm-pack-plugin");
 
 /** @type WebpackConfig */
 const extensionConfig = {
-    target: 'node',
-    mode: 'none',
-    entry: './src/extension.ts',
+    target: "node",
+    mode: "none",
+    entry: "./src/extension.ts",
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'extension.js',
-        libraryTarget: 'commonjs2'
+        path: path.resolve(__dirname, "dist"),
+        filename: "extension.js",
+        libraryTarget: "commonjs2",
     },
     externals: {
-        vscode: 'commonjs vscode'
+        vscode: "commonjs vscode"
     },
     resolve: {
-        extensions: ['.ts', '.js']
+        extensions: [".ts", ".js"]
     },
     module: {
         rules: [
@@ -32,27 +32,27 @@ const extensionConfig = {
                 exclude: /node_modules/,
                 use: [
                     {
-                        loader: 'ts-loader'
+                        loader: "ts-loader"
                     }
-                ]
-            }
+                ],
+            },
         ]
     },
     plugins: [
         new htmlWebpackPlugin({
-            template: path.resolve(__dirname, "src/index.html")
+            templateContent: "<!DOCTYPE html><html></html>",
         }),
         new wasmPackPlugin({
             crateDirectory: path.resolve(__dirname, "crates/msi-wasm"),
-            outDir: path.resolve(__dirname, 'pkg')
-        })
+            outDir: path.resolve(__dirname, "pkg"),
+        }),
     ],
-    devtool: 'nosources-source-map',
+    devtool: "nosources-source-map",
     infrastructureLogging: {
         level: "log",
     },
     experiments: {
-        asyncWebAssembly: true
+        asyncWebAssembly: true,
     }
 };
 module.exports = [extensionConfig];
