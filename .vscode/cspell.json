@@ -1,7 +1,9 @@
 {
   "words": [
     "localizable",
-    "prewatch"
+    "prewatch",
+    "rowsview",
+    "tablesview"
   ],
   "dictionaries": [
     "rust"
