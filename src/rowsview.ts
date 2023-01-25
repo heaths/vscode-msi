@@ -51,12 +51,10 @@ export class RowsViewer implements vscode.CustomReadonlyEditorProvider<PackageDo
         const handle = this._registry.add(document);
         webviewPanel.onDidDispose(() => handle.dispose());
 
+        const nonce = util.nonce();
         webviewPanel.webview.options = {
             enableScripts: true,
         };
-
-        const nonce = util.nonce();
-        const htmlUri = vscode.Uri.joinPath(this._context.extensionUri, "dist", "index.html");
 
         webviewPanel.webview.html = `
             <!DOCTYPE html>
